@@ -1,4 +1,4 @@
-baseURL = "http://vetroart.netlify.com/"
+baseURL = "https://vetroart.netlify.com/"
 disqusShortname = ""
 googleAnalytics = ""
 languageCode = "en-us"
