@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+  <div id="portfolio" class="column is-10">
+    <div class="portfolio-container">
+          <!--div class="column is-half-tablet is-one-third-desktop is-one-quarter-widescreen item filter">
+              <div class="card-filter">
+              </div>
+          </div-->
+      {{ range .Data.Pages.ByDate.Reverse }}
+          <div class="column is-one-third-tablet is-one-quarter-desktop is-one-sixth-widescreen item post {{ .Type }}" data-type="{{ .Type }}">
+              <div class="card">
+                  {{ if and (isset .Params "image") .Params.image }}
+                    <div class="card-image">
+                      <figure class="image is-1by1">
+                        <a href="{{ .Permalink }}" title="" class="with-hover-overlay with-hover-icon">
+                            <img src="{{.Site.BaseURL}}{{ .Params.image }}" alt="" class="img-responsive">
+                        </a>
+                      </figure>
+                    </div>
+                  {{else}}
+                  {{ end }}
+                  <div class="card-content card-text">
+                      <h4><a href="{{ .Permalink }}">{{ .Title }}</a></h4>
+                  </div>
+              </div>
+          </div>
+      {{ end }}
+    </div>
+  </div>
+
+{{ end }}

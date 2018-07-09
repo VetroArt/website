@@ -1,3 +1,21 @@
-baseURL = "http://example.org/"
+baseURL = "http://vetroart.netlify.com/"
+disqusShortname = ""
+googleAnalytics = ""
 languageCode = "en-us"
-title = "My New Hugo Site"
+publishDir = "public"
+theme = "thomasmichaeler-theme"
+title = "Vetro"
+[params]
+copyright = "© 2018 MM"
+description = "Vetro Art"
+email = "hi@thomasmichaeler.com"
+[[params.navlinks]]
+home = true
+name = "Home"
+url = "home/"
+[[params.navlinks]]
+name = "Portfolio"
+url = "portfolio/"
+[[params.navlinks]]
+name = "About"
+url = "about/"

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>{{ partial "head.html" . }}</head>
+<body>
+  <div class="full-page">
+      <div class="columns is-centered is-multiline">
+            {{ partial "navbar.html" . }}
+            {{ block "main" . }}
+            {{ end }}
+      </div>
+  </div>
+  {{ partial "scripts.html" . }}
+</body>
+</html>

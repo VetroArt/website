@@ -1,0 +1,20 @@
+<div id="navbar" class="column is-10">
+  <nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+    
+    <div class="navbar-start">
+      <a class="navbar-item" href="{{ .Site.BaseURL }}">
+        <img src="{{ "img/vetro_logo.png" | absURL }}" alt="Vetro: Art in Bottles" width="112" height="28">
+      </a>
+    </div>
+
+    <div class="navbar-end">
+          {{ $url := .Site.BaseURL }}
+          {{ range .Site.Params.navlinks }}
+          <a class="navbar-item" href="{{ $url }}{{ .url }}">{{ .name }}</a>
+          {{ end }}
+    </div>
+      
+  </nav>
+</div>
+
+
